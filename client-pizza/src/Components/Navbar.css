@@ -1,0 +1,12 @@
+.navbar-brand {
+  color: black !important;
+}
+
+.nav-link {
+  color: black !important;
+  transition: 0.5s ease-in-out !important;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}

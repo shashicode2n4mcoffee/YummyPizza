@@ -8,8 +8,8 @@ const Home = () => {
       <div className='row'>
         {pizzas.map((pizza, index) => {
           return (
-            <div className='col-md-4'>
-              <div key={index}>
+            <div className='col-md-4' key={index}>
+              <div>
                 <div>
                   <Pizza pizza={pizza} />
                 </div>

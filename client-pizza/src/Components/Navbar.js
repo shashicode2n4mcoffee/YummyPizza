@@ -9,14 +9,14 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        class='navbar navbar-expand-lg shadow p-3 mb-5 bg-white rounded'
+        className='navbar navbar-expand-lg shadow p-3 mb-5 bg-white rounded'
         style={navbar}
       >
-        <a class='navbar-brand' href='#'>
+        <a className='navbar-brand' href='#'>
           Yummy Pizza
         </a>
         <button
-          class='navbar-toggler'
+          className='navbar-toggler'
           type='button'
           data-toggle='collapse'
           data-target='#navbarNav'
@@ -24,20 +24,20 @@ const Navbar = () => {
           aria-expanded='false'
           aria-label='Toggle navigation'
         >
-          <span class='navbar-toggler-icon'></span>
+          <span className='navbar-toggler-icon'></span>
         </button>
         <div
-          class='collapse navbar-collapse justify-content-end'
+          className='collapse navbar-collapse justify-content-end'
           id='navbarNav'
         >
-          <ul class='navbar-nav '>
-            <li class='nav-item active'>
-              <a class='nav-link' href='#'>
+          <ul className='navbar-nav '>
+            <li className='nav-item active'>
+              <a className='nav-link' href='#'>
                 Login
               </a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='#'>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
                 Cart
               </a>
             </li>

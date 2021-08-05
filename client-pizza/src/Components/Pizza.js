@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import './Pizza.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCartAction } from '../Redux/Actions/cartAction'
+
 const Pizza = ({ pizza }) => {
   const [quantity, setQuantity] = useState(1)
   const [varient, setVarient] = useState('small')
@@ -9,6 +12,12 @@ const Pizza = ({ pizza }) => {
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(addToCartAction(pizza, varient, quantity))
+  }
   return (
     <div className='card m-1' style={{ width: '18rem' }}>
       <div onClick={handleShow}>
@@ -65,7 +74,7 @@ const Pizza = ({ pizza }) => {
           </h1>
         </div>
         <div className='w-100 add-to-cart'>
-          <button type='button' className='btn btn-danger'>
+          <button type='button' className='btn btn-danger' onClick={addToCart}>
             ADD TO CART
           </button>
         </div>

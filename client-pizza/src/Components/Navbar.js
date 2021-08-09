@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './Navbar.css'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { addToCartReducer } from '../Redux/Reducers/cartReducer'
+// import { addToCartReducer } from '../Redux/Reducers/cartReducer'
 
 const Navbar = () => {
   const navbar = {
@@ -18,7 +18,7 @@ const Navbar = () => {
         className='navbar navbar-expand-sm shadow p-3 mb-5 bg-white rounded'
         style={navbar}
       >
-        <a className='navbar-brand' href='#'>
+        <a className='navbar-brand' href='/'>
           Yummy Pizza
         </a>
         <button
@@ -38,12 +38,12 @@ const Navbar = () => {
         >
           <ul className='navbar-nav '>
             <li className='nav-item active'>
-              <a className='nav-link' href='#'>
+              <a className='nav-link' href='/login'>
                 Login
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
+              <a className='nav-link' href='/cart'>
                 Cart {items.cartItems.length ? items.cartItems.length : ' '}
               </a>
             </li>

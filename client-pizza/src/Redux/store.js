@@ -5,13 +5,23 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { getAllPizzasReducers } from './Reducers/pizzaReducers'
 import { addToCartReducer } from './Reducers/cartReducer'
+import { registerUserAction } from './Actions/userAction'
 
 const finalReducer = combineReducers({
   getAllPizzasReducers,
   addToCartReducer,
+  registerUserAction,
 })
 
-const initialState = {}
+const cartItems = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
+  : []
+
+const initialState = {
+  addToCartReducer: {
+    cartItems: cartItems,
+  },
+}
 
 const composeEnhancers = composeWithDevTools({})
 

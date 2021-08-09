@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import './Pizza.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addToCartAction } from '../Redux/Actions/cartAction'
 
 const Pizza = ({ pizza }) => {
@@ -19,9 +19,9 @@ const Pizza = ({ pizza }) => {
     dispatch(addToCartAction(pizza, varient, quantity))
   }
   return (
-    <div className='card m-1' style={{ width: '18rem' }}>
+    <div className='card m-1' style={{ width: '22rem' }}>
       <div onClick={handleShow}>
-        <h1>{pizza.name}</h1>
+        <h1 className='mt-3'>{pizza.name}</h1>
         <img
           className='img-fluid'
           src={pizza.image}
@@ -67,16 +67,22 @@ const Pizza = ({ pizza }) => {
         </div>
       </div>
 
-      <div className='d-flex p-2 bd-highlight justify-content-center align-items-center '>
+      <div className='d-flex p-2 bd-highlight  justify-content-center align-items-end '>
         <div className='w-100'>
           <h1 className='mt-1'>
             Price : Rs {pizza.prices[0][varient] * quantity}
           </h1>
         </div>
-        <div className='w-100 add-to-cart'>
-          <button type='button' className='btn btn-danger' onClick={addToCart}>
-            ADD TO CART
-          </button>
+        <div className='w-100'>
+          <h1 className='mt-1'>
+            <button
+              type='button'
+              className='btn btn-danger '
+              onClick={addToCart}
+            >
+              <span className='mb-1'> ADD TO CART</span>
+            </button>
+          </h1>
         </div>
       </div>
 
